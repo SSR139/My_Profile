@@ -1,0 +1,210 @@
+/* ===== General ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* ===== Hero ===== */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, #000000, #1e40af);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex-direction: column; /* stack image above text */
+    gap: 20px; /* space between image and text */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .hero-content {
+    max-width: 600px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1e3a8a;
+}
+
+.btn-secondary {
+    background: #000000;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background: #333333;
+}
+
+/* ===== Sections ===== */
+.section {
+    padding: 80px 0;
+}
+
+.white-section {
+    background: #ffffff;
+    color: #333;
+}
+
+.blue-section {
+    background: #1e40af;
+    color: white;
+}
+
+/* ===== About ===== */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about img,
+.hero .about-image img {
+    width: 200px; /* size of circle */
+    height: 200px; /* equal height for perfect circle */
+    border-radius: 50%; /* circular image */
+    object-fit: cover; /* maintain image ratio */
+    border: 5px solid #2563eb; /* optional border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===== Projects ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #f0f4f8;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card h3 {
+    color: #1e40af;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== Social Links ===== */
+.btn-social {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    background: #1e3a8a;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .about { flex-direction: column; text-align: center; }
+    .about img { margin-bottom: 20px; }
+    .nav-links { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.2rem; }
+}

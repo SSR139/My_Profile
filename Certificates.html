@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates | Shreyas Rasam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Poppins', sans-serif; margin:0; background:#f9fafb; color:#333;}
+header { background:#1f2933; color:white; text-align:center; padding:60px 20px;}
+header h1 { margin-bottom:10px; }
+header p { font-weight:400; }
+section { padding:50px 20px; max-width:1000px; margin:auto; }
+h3 { margin:10px 0; }
+
+/* ===== Certificates Grid ===== */
+.certificates { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px;}
+.certificate-card { background:white; padding:25px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.certificate-card p { margin:8px 0; line-height:1.5;}
+.certificate-card a { display:inline-block; margin-top:10px; padding:10px 18px; background:#16a34a; color:white; text-decoration:none; border-radius:6px; font-weight:600; transition:0.3s;}
+.certificate-card a:hover { background:#15803d;}
+.skills { list-style:none; padding:0; margin-top:10px;}
+.skills li { background:#e5e7eb; display:inline-block; padding:6px 10px; margin:5px 5px 0 0; border-radius:5px; font-size:14px;}
+.back-link { display:inline-block; margin-top:30px; font-weight:bold; color:#2563eb; text-decoration:none;}
+.back-link:hover { text-decoration:underline;}
+
+/* ===== Lightbox Modal ===== */
+.modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;}
+.modal img { max-width:90%; max-height:90%; border-radius:5px; }
+.modal:target { display:flex; }
+.modal a.close { position:absolute; top:20px; right:30px; color:white; font-size:30px; text-decoration:none; font-weight:bold; }
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>My Certificates</h1>
+<p>Professional Certifications & Skills</p>
+</header>
+
+<section>
+<div class="certificates">
+
+<!-- Oracle Certificate -->
+<div class="certificate-card">
+<h3>Oracle Cloud Infrastructure 2025 Certified Architect Associate</h3>
+<p><strong>Issued by:</strong> Oracle</p>
+<p>Validates foundational knowledge of Oracle Cloud technologies used in enterprise systems.</p>
+<p><strong>Key Skills:</strong></p>
+<ul class="skills">
+<li>SQL Basics</li>
+<li>Relational Databases</li>
+<li>Oracle DB Concepts</li>
+<li>Data Modeling</li>
+<li>Enterprise Systems</li>
+</ul>
+<a href="#oracleModal">View Full Certificate</a>
+</div>
+
+<!-- AWS Certificate -->
+<div class="certificate-card">
+<h3>AWS Certified Solutions Architect – Professional</h3>
+<p><strong>Issued by:</strong> Amazon Web Services (AWS)</p>
+<p>Demonstrates advanced expertise in designing secure, scalable, and cost-optimized cloud architectures on AWS.</p>
+<p><strong>Key Skills:</strong></p>
+<ul class="skills">
+<li>AWS Architecture Design</li>
+<li>Cloud Security</li>
+<li>High Availability</li>
+<li>Disaster Recovery</li>
+<li>Cost Optimization</li>
+<li>Networking (VPC)</li>
+</ul>
+<a href="#awsModal">View Full Certificate</a>
+</div>
+
+</div>
+
+<a class="back-link" href="index.html">← Back to Home</a>
+</section>
+
+<!-- ===== Modals ===== -->
+<div id="oracleModal" class="modal">
+<a href="#" class="close">&times;</a>
+<img src="OCI.jpg" alt="Oracle Certificate">
+</div>
+
+<div id="awsModal" class="modal">
+<a href="#" class="close">&times;</a>
+<img src="AWS.jpg" alt="AWS Certificate">
+</div>
+
+</body>
+</html>
